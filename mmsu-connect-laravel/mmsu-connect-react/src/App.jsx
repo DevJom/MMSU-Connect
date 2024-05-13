@@ -10,7 +10,7 @@ function App() {
                             fugiat ut assumenda excepturi exercitationem quasi.
                             In deleniti eaque aut repudiandae et a id nisi.
                         </p>
-                        <button className="btn btn-primary">Jomar pangitn </button>
+                        <button className="btn btn-primary">Jomar pangit </button>
                     </div>
                 </div>
             </div>
