@@ -3,7 +3,7 @@ import { LoginPage } from "./components/LoginPage";
 function App() {
     return (
         <>
-            <div className=" bg-gray-100">
+            <div className=" bg-zinc-200">
                 <LoginPage/>
             </div>
            
