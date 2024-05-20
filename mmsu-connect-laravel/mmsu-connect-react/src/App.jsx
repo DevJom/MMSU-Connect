@@ -5,9 +5,12 @@ import Hero from "./components/hero";
 function App() {
     return (
         <>
-        <HomeNav></HomeNav>
-        <Hero></Hero>
-        <Footer></Footer>
+            <div className="sticky top-0 z-[999]">
+                <HomeNav />
+            </div>
+
+            <Hero />
+            <Footer />
         </>
     );
 }
