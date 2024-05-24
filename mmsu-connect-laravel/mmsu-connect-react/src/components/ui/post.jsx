@@ -1,7 +1,5 @@
-import {user, reply, post, like} from '../../../data/data.json'; // Assuming your JSON data is in a file named data.json
-
 const Post = () => {
-    const userType = 'student' // logic of user view
+    const userType = 'student'
 
     const renderReplies = () => {
         return (
