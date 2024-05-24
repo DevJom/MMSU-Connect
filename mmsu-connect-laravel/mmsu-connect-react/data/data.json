@@ -1,0 +1,129 @@
+{
+    "user": [
+        {
+            "id": "1000",
+            "type": "student",
+            "first_name": "John",
+            "last_name": "Luna",
+            "email": "john@gmail.com",
+            "password": "e10adc3949ba59abbe56e057f20f883e"
+        },
+        {
+            "id": "1001",
+            "type": "teacher",
+            "first_name": "Jane",
+            "last_name": "Doe",
+            "email": "jane@gmail.com",
+            "password": "d41d8cd98f00b204e9800998ecf8427e"
+        },
+        {
+            "id": "1002",
+            "type": "student",
+            "first_name": "Alice",
+            "last_name": "Smith",
+            "email": "alice@gmail.com",
+            "password": "098f6bcd4621d373cade4e832627b4f6"
+        },
+        {
+            "id": "1003",
+            "type": "student",
+            "first_name": "Bob",
+            "last_name": "Brown",
+            "email": "bob@gmail.com",
+            "password": "21232f297a57a5a743894a0e4a801fc3"
+        },
+        {
+            "id": "1004",
+            "type": "teacher",
+            "first_name": "Eve",
+            "last_name": "Black",
+            "email": "eve@gmail.com",
+            "password": "1d735b44e0678d3acfb7ee56f1f4f7b6"
+        },
+        {
+            "id": "1005",
+            "type": "admin",
+            "first_name": "Charlie",
+            "last_name": "Green",
+            "email": "charlie@gmail.com",
+            "password": "5f4dcc3b5aa765d61d8327deb882cf99"
+        },
+        {
+            "id": "1006",
+            "type": "student",
+            "first_name": "David",
+            "last_name": "White",
+            "email": "david@gmail.com",
+            "password": "25d55ad283aa400af464c76d713c07ad"
+        },
+        {
+            "id": "1007",
+            "type": "teacher",
+            "first_name": "Fiona",
+            "last_name": "Red",
+            "email": "fiona@gmail.com",
+            "password": "e99a18c428cb38d5f260853678922e03"
+        },
+        {
+            "id": "1008",
+            "type": "student",
+            "first_name": "Grace",
+            "last_name": "Blue",
+            "email": "grace@gmail.com",
+            "password": "098f6bcd4621d373cade4e832627b4f6"
+        },
+        {
+            "id": "1009",
+            "type": "admin",
+            "first_name": "Hank",
+            "last_name": "Yellow",
+            "email": "hank@gmail.com",
+            "password": "5f4dcc3b5aa765d61d8327deb882cf99"
+        }
+    ],
+
+    "post": [
+        {
+            "post_id": "2000",
+            "user_id": "1000",
+            "content": "This is my first post!",
+            "timestamp": "2024-05-21T12:00:00Z"
+        },
+        {
+            "post_id": "2001",
+            "user_id": "1001",
+            "content": "Hello world!",
+            "timestamp": "2024-05-21T12:05:00Z"
+        }
+    ],
+
+    "reply": [
+        {
+            "reply_id": "3000",
+            "post_id": "2000",
+            "user_id": "1002",
+            "content": "Nice post, John!",
+            "timestamp": "2024-05-21T12:10:00Z"
+        },
+        {
+            "reply_id": "3001",
+            "post_id": "2001",
+            "user_id": "1003",
+            "content": "Welcome, Jane!",
+            "timestamp": "2024-05-21T12:15:00Z"
+        }
+    ],
+
+    "like": [
+        {
+            "like_id": "4000",
+            "post_id": "2000",
+            "user_id": "1004"
+        },
+        {
+            "like_id": "4001",
+            "post_id": "2001",
+            "user_id": "1005"
+        }
+    ]
+}

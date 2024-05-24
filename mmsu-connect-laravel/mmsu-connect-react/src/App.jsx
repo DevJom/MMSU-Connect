@@ -1,18 +1,21 @@
-import { HomeNav } from "./components/HomeNav";
-import { Footer } from "./components/footer";
-import Hero from "./components/hero";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./navbar";
+import Home from "./pages/home";
+import Blogs from "./pages/blogs";
+import Contact from "./pages/contact";
+import NoPage from "./pages/noPage";
 
-function App() {
+const App = () => {
     return (
-        <>
-            <div className="sticky top-0 z-[999]">
-                <HomeNav />
-            </div>
-
-            <Hero />
-            <Footer />
-        </>
+        <Routes>
+            <Route path="/" element={<Navbar />}>
+                <Route index element={<Home />} />
+                <Route path="blogs" element={<Blogs />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="*" element={<NoPage />} />
+            </Route>
+        </Routes>
     );
-}
+};
 
 export default App;
