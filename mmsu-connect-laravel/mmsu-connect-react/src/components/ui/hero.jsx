@@ -14,9 +14,6 @@ const Hero = () => {
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form className="card-body">
                             <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Email</span>
-                                </label>
                                 <input
                                     type="email"
                                     placeholder="email"
@@ -25,9 +22,6 @@ const Hero = () => {
                                 />
                             </div>
                             <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Password</span>
-                                </label>
                                 <input
                                     type="password"
                                     placeholder="password"
@@ -43,7 +37,7 @@ const Hero = () => {
                                     </a>
                                 </label>
                             </div>
-                            <div className="form-control mt-6">
+                            <div className="form-control mt-4">
                                 <button className="btn btn-success">
                                     Login
                                 </button>
