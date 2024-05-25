@@ -72,7 +72,7 @@ const Sidebar = () => {
     }
 
     return (
-        <div className="drawer lg:drawer-open">
+        <div className="drawer lg:drawer-open h-">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
 
             <div className="drawer-side">
