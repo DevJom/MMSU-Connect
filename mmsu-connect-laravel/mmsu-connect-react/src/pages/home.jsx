@@ -7,8 +7,11 @@ const home = () => {
     return (
         <>
             <div className=" bg-base-200 flex  gap-10 ">
-                <div className="w-[400px] ml-10 flex-initial sticky top-0 z-[999]">
-                    <SideCard></SideCard>
+                <div className="w-[400px] ml-4 flex-initial sticky top-0 z-[999]">
+                    <SideCard
+                        title="Popular"
+                        description="Pogi ni Gabriel Andrei Adajar"
+                    ></SideCard>
                 </div>
 
                 <div className="grow flex-initial">
