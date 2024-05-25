@@ -7,7 +7,7 @@ const home = () => {
     return (
         <>
             <div className=" bg-base-200 flex  gap-10 ">
-                <div className="w-[400px] ml-4 flex-initial sticky top-0 z-[999]">
+                <div className="w-[400px] ml-4 flex-initial">
                     <SideCard
                         title="Popular"
                         description="Pogi ni Gabriel Andrei Adajar"
@@ -16,13 +16,13 @@ const home = () => {
 
                 <div className="grow flex-initial">
                     <div className="mt-4 mb-4">
-                        <Createpost />
+                        <Createpost></Createpost>
                     </div>
 
                     <PostCard></PostCard>
                 </div>
 
-                <div className="w-auto flex-initial">
+                <div className="shrink w-fit ">
                     <Sidebar />
                 </div>
             </div>

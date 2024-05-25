@@ -5,6 +5,8 @@ import NoPage from "./pages/noPage";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
 import Anouncement from "./pages/anouncement";
+import Profile from "./pages/profile";
+import About from "./pages/about";
 
 const App = () => {
     return (
@@ -15,6 +17,8 @@ const App = () => {
                 <Route index element={<Home />} />
                 <Route path="*" element={<NoPage />} />
                 <Route path="/anouncement" element={<Anouncement />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/about" element={<About />} />
             </Route>
         </Routes>
     );

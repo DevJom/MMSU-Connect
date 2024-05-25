@@ -22,14 +22,14 @@ const Hero = () => {
                                 <div className="form-control">
                                     <input
                                         type="text"
-                                        placeholder="email"
+                                        placeholder="Email"
                                         className="input input-bordered"
                                     />
                                 </div>
                                 <div className="form-control">
                                     <input
                                         type="text"
-                                        placeholder="password"
+                                        placeholder="Password"
                                         className="input input-bordered"
                                     />
                                     <label className="label">
