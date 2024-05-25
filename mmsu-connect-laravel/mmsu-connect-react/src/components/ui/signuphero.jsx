@@ -1,4 +1,5 @@
 import Bg from "./bg";
+import { LogOut } from "lucide-react";
 
 const Signuphero = () => {
     return (
@@ -44,11 +45,23 @@ const Signuphero = () => {
                                     </a>
                                 </label>
                             </div>
-                            <div className="form-control mt-6">
-                                <button className="btn btn-primary">
-                                    Sign Up
-                                </button>
-                            </div>
+                            <div className="form-control">
+                                    <button className="btn btn-success tesx-bg-white">
+                                        <LogOut className="mr-2 h-4 w-4" />
+                                        Sign-up
+                                    </button>
+                                    <label className="label label-text-alt text-center">
+                                        <p className="inline">
+                                            Already have account?{" "}
+                                            <a
+                                                href="login"
+                                                className="label-text-alt link link-hover"
+                                            >
+                                                Login
+                                            </a>
+                                        </p>
+                                    </label>
+                                </div>
                         </div>
                     </div>
                 </div>
