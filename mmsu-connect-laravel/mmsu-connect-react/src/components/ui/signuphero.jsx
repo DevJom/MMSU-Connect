@@ -1,5 +1,6 @@
 import Bg from "./bg";
 import { LogOut } from "lucide-react";
+import Dropfile from "./dropfile";
 
 const Signuphero = () => {
     return (
@@ -44,6 +45,7 @@ const Signuphero = () => {
                                         Forgot password?
                                     </a>
                                 </label>
+                                <Dropfile/>
                             </div>
                             <div className="form-control">
                                     <button className="btn btn-success tesx-bg-white">
