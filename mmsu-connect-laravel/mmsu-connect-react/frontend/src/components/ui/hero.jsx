@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../../constants";
 import { LogOut } from "lucide-react";
 import { LogIn } from "lucide-react";
+import LoadingIndicator from "../LoadingIndicator";
 
 const Hero = ({route, method}) => {
     const [username, setUsername] = useState("")
@@ -77,6 +78,7 @@ const Hero = ({route, method}) => {
                                         </a>
                                     </label>
                                 </div>
+                                {loading && <LoadingIndicator />}
                                 <div className="form-control">
                                     <button className="btn btn-success tesx-bg-white" onClick={handleSubmit}>
                                         {/* {method == "login" ? 

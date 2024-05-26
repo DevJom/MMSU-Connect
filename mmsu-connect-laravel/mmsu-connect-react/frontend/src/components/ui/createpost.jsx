@@ -1,7 +1,20 @@
-import setTitle from "../../pages/home"
-import createPost from "../../pages/home"
-import title from "../../pages/home"
+import {useState, useEffect} from "react"
+import api from "../../api";
+
+
 const Createpost = ({username}) => {
+
+    const [content, setContent] = useState("");
+    const [title, setTitle] = useState("");
+
+    const createPost = (e) =>{
+        e.preventDefault();
+        api.post("/api/posts/", {content, title}).then((res) => {
+            if(res.status === 201) alert("Post created");
+            else alert("Post failed to make");
+        }).catch((err) => alert(err));
+    }
+
     return (
         <div className="Create_Post">
             <div className="card bg-base-100 shadow-xl">
@@ -38,16 +51,27 @@ const Createpost = ({username}) => {
                                     </h3>
                                     <form onSubmit={createPost}>
                                         <label htmlFor="title"> Title: </label>
-                                    <br/>
-                                    <input
-                                        type="text"
-                                        id="title"
-                                        name="title"
-                                        required
-                                        onChange={(e) => setTitle(e.target.value)}
-                                        className="input input-bordered"
-                                        value={title}
-                                    />
+                                        <br/>
+                                        <input
+                                            type="text"
+                                            id="title"
+                                            name="title"
+                                            required
+                                            onChange={(e) => setTitle(e.target.value)}
+                                            className="input input-bordered"
+                                            value={title}
+                                        />
+                                        <label htmlFor="content"> Content: </label>
+                                        <br/>
+                                        <textarea 
+                                            id = "content"
+                                            name = "content"
+                                            required value={content}
+                                            onChange={(e) => setContent(e.target.value)}
+                                            className="textarea textarea-bordered">
+                                        </textarea>
+                                        <br/>
+                                        <input type = "submit" value = "Submit" className="btn btn-success tesx-bg-white"/>
                                     </form>
                                 </div>
                                 <label

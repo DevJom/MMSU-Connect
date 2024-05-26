@@ -1,6 +1,8 @@
+import React from "react"
 import Menu from "./menu";
 
-const PostCard = () => {
+const PostCard = ({post, onDelete}) => {
+    const formattedDate = new Date(post.created_at).toLocaleDateString("en-US")
     return (
         <>
             <button
@@ -19,10 +21,18 @@ const PostCard = () => {
                                 />
                             </figure>
                             <div className="card-body w-[600px]">
-                                <h2 className="card-title">Post Title</h2>
-                                <p>
-                                    Click the button to listen on Spotiwhy app.
+                                <h2 className="post-title">
+                                    {post.title}
+                                </h2>
+                                <p classname="post-content">
+                                    {post.content}
                                 </p>
+                                <p classname="post-date">
+                                    {formattedDate}
+                                </p>
+                                <button className="delete-btn" onClick={() => onDelete(post.id)}>
+                                    Delete
+                                </button>
                                 <div className="card-actions">
                                     <Menu />
                                 </div>

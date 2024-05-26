@@ -6,7 +6,7 @@ import {useState, useEffect} from "react"
 import api from "../api";
 
 const Home = () => {
-    const [notes, setPosts] = useState([]);
+    const [posts, setPosts] = useState([]);
     const [content, setContent] = useState("");
     const [title, setTitle] = useState("");
     
@@ -22,21 +22,13 @@ const Home = () => {
     };
 
     const deletePost = (id) =>{
-        api.delete(`/api/posts/delete/${id}`).then((res) => {
+        console.log("HEHE");
+        api.delete(`/api/posts/delete/${id}/`).then((res) => {
             if(res.status === 204) alert("Post deleted");
             else alert("Failed to delete post");
+            getPosts();
         }).catch((err) => alert(err));
-        getPosts();
     };
-
-    const createPost = (e) =>{
-        e.preventDefault();
-        api.post("/api/posts/", {content, title}).then((res) => {
-            if(res.status === 201) alert("Post created");
-            else alert("Post failed to make");
-        }).catch((err) => alert(err));
-        getPosts();
-    }
 
     return ( 
         <>
@@ -52,8 +44,10 @@ const Home = () => {
                     <div className="mt-4 mb-4">
                         <Createpost></Createpost>
                     </div>
+                    {posts.map((post) => (
+                        <PostCard post={post} onDelete={deletePost} key={post.id}/>
+                    ))}
 
-                    <PostCard></PostCard>
                 </div>
 
                 <div className="shrink w-fit ">
