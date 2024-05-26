@@ -1,9 +1,9 @@
-import Signuphero from "../components/ui/signuphero"
+import Hero from "../components/ui/hero";
 
 
 const Signup = () => {
   return (
-    <Signuphero/>
+    <Hero route="/api/user/register/" method="register"/>
   )
 }
 

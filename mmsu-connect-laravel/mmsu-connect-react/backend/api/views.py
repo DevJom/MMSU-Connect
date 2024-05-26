@@ -1,19 +1,19 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from rest_framework import generics
-from .serializers import UserSerializer, NoteSerializer
+from .serializers import UserSerializer, PostSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
-from .models import Note
+from .models import Post
 
-class NoteListCreate(generics.ListCreateAPIView):
+class PostListCreate(generics.ListCreateAPIView):
     # All generic views can be leave as is
     # As long as specifiy a serializer class, permission class and query set it still works
-    serializer_class = NoteSerializer
+    serializer_class = PostSerializer
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         user = self.request.user
-        return Note.objects.filter(author=user)
+        return Post.objects.filter(author=user)
     
     def perform_create(self, serializer):
         if serializer.is_valid():
@@ -21,13 +21,13 @@ class NoteListCreate(generics.ListCreateAPIView):
         else:
             print(serializer.errors)
 
-class NoteDelete(generics.DestroyAPIView):
-    serializer_class = NoteSerializer
+class PostDelete(generics.DestroyAPIView):
+    serializer_class = PostSerializer
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         user = self.request.user
-        return Note.objects.filter(author=user)
+        return Post.objects.filter(author=user)
 
 # Create your views here.
 class CreateUserView(generics.CreateAPIView):

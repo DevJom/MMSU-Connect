@@ -1,7 +1,39 @@
+import {useState} from "react"
 import Bg from "./bg";
+import api from "../../api"
+import { useNavigate } from "react-router-dom";
+import { ACCESS_TOKEN, REFRESH_TOKEN } from "../../constants";
+import { LogOut } from "lucide-react";
 import { LogIn } from "lucide-react";
 
-const Hero = () => {
+const Hero = ({route, method}) => {
+    const [username, setUsername] = useState("")
+    const [password, setPassword] = useState("")
+    const [loading, setLoading] = useState(false)
+    const navigate = useNavigate()
+    const name = method === "login" ? "Login" : "Sign Up"
+
+    const handleSubmit = async (e) => {
+        setLoading(true);
+        e.preventDefault();
+
+        try{
+            const res = await api.post(route, {username, password})
+            if(method === "login"){
+                console.log(res.data.access)
+                localStorage.setItem(ACCESS_TOKEN, res.data.access);
+                localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
+                navigate("/")
+            }else{
+                navigate("/login")
+            }
+        }catch(error){
+            alert(error)
+        }finally{
+            setLoading(false)
+        }
+    }
+
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
@@ -23,13 +55,17 @@ const Hero = () => {
                                     <input
                                         type="text"
                                         placeholder="Email"
+                                        value = {username}
+                                        onChange={(e) => setUsername(e.target.value)}
                                         className="input input-bordered"
                                     />
                                 </div>
                                 <div className="form-control">
                                     <input
-                                        type="text"
+                                        type="password"
                                         placeholder="Password"
+                                        value = {password}
+                                        onChange={(e) => setPassword(e.target.value)}
                                         className="input input-bordered"
                                     />
                                     <label className="label">
@@ -42,9 +78,11 @@ const Hero = () => {
                                     </label>
                                 </div>
                                 <div className="form-control">
-                                    <button className="btn btn-success tesx-bg-white">
-                                        <LogIn className="mr-2 h-4 w-4" />
-                                        Login
+                                    <button className="btn btn-success tesx-bg-white" onClick={handleSubmit}>
+                                        {/* {method == "login" ? 
+                                            <LogIn className="mr-2 h-4 w-4" /> : <LogOut className="mr-2 h-4 w-4" />
+                                        } */}
+                                        {name}
                                     </button>
                                     <label className="label label-text-alt text-center">
                                         <p className="inline">

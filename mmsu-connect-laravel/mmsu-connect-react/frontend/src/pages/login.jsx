@@ -1,9 +1,9 @@
 import Hero from "../components/ui/hero";
 
-const login = () => {
+const Login = () => {
   return (
-    <Hero/>
+    <Hero route="/api/token/" method="login"/>
   )
 }
 
-export default login
+export default Login

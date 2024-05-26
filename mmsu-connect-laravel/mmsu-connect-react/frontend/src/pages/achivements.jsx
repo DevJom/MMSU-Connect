@@ -1,5 +1,5 @@
-const achivements = () => {
+const Achivements = () => {
     return <div>achivements</div>;
 };
 
-export default achivements;
+export default Achivements;

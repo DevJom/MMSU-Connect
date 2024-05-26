@@ -1,7 +1,12 @@
+import {useState} from "react"
 import Bg from "./bg";
+import api from "../../api"
+import { useNavigate } from "react-router-dom";
+import { ACCESS_TOKEN, REFRESH_TOKEN } from "../../constants";
 import { LogOut } from "lucide-react";
 
-const Signuphero = () => {
+const Signuphero = ({route, method}) => {
+
     return (
         <div className="hero min-h-screen bg-base-200">
             <Bg></Bg>
@@ -40,7 +45,7 @@ const Signuphero = () => {
                                 </label>
                             </div>
                             <div className="form-control">
-                                <button className="btn btn-success tesx-bg-white">
+                                <button className="btn btn-success tesx-bg-white" onClick={handleSubmit}>
                                     <LogOut className="mr-2 h-4 w-4" />
                                     Sign-up
                                 </button>

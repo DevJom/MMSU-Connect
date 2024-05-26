@@ -1,4 +1,7 @@
-const Createpost = () => {
+import setTitle from "../../pages/home"
+import createPost from "../../pages/home"
+import title from "../../pages/home"
+const Createpost = ({username}) => {
     return (
         <div className="Create_Post">
             <div className="card bg-base-100 shadow-xl">
@@ -33,9 +36,19 @@ const Createpost = () => {
                                     <h3 className="text-lg font-bold bg-su">
                                         UserName
                                     </h3>
-                                    <p className="py-4">
-                                        This modal works with a hidden checkbox!
-                                    </p>
+                                    <form onSubmit={createPost}>
+                                        <label htmlFor="title"> Title: </label>
+                                    <br/>
+                                    <input
+                                        type="text"
+                                        id="title"
+                                        name="title"
+                                        required
+                                        onChange={(e) => setTitle(e.target.value)}
+                                        className="input input-bordered"
+                                        value={title}
+                                    />
+                                    </form>
                                 </div>
                                 <label
                                     className="modal-backdrop"
