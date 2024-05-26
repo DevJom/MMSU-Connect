@@ -1,25 +1,31 @@
-import Post from "../components/ui/post";
+import SideCard from "../components/ui/sideCard";
+import PostCard from "../components/ui/postCard";
+import Sidebar from "../components/ui/sidebar";
+import Createpost from "../components/ui/createpost";
 
 const home = () => {
     return (
         <>
-        <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content text-center">
-                <div className="max-w-md">
-                    <h1 className="text-5xl font-bold">HOME</h1>
-                    
-                    <p className="py-6">
-                        Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                        assumenda excepturi exercitationem quasi. In deleniti
-                        eaque aut repudiandae et a id nisi.
-                    </p>
-                    <Post className="item-center"></Post>
-                    <button className="btn btn-primary">Get Started</button>
+            <div className=" bg-base-200 flex  gap-10 ">
+                <div className="w-[400px] ml-4 flex-initial">
+                    <SideCard
+                        title="Popular"
+                        description="Pogi ni Gabriel Andrei Adajar"
+                    ></SideCard>
+                </div>
+
+                <div className="grow flex-initial">
+                    <div className="mt-4 mb-4">
+                        <Createpost></Createpost>
+                    </div>
+
+                    <PostCard></PostCard>
+                </div>
+
+                <div className="shrink w-fit ">
+                    <Sidebar />
                 </div>
             </div>
-        </div>
-
-        
         </>
     );
 };

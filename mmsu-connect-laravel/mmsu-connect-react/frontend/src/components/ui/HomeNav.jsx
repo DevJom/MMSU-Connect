@@ -54,7 +54,7 @@ export const HomeNav = () => {
                         <li>
                             <a>About</a>
                         </li>
-                        { <li>
+                        {/* <li>
                             <details>
                                 <summary>Parent</summary>
                                 <ul className="p-2">
@@ -66,7 +66,7 @@ export const HomeNav = () => {
                                     </li>
                                 </ul>
                             </details>
-                        </li> }
+                        </li> */}
                         <li>
                             <a>Devlopers</a>
                         </li>
