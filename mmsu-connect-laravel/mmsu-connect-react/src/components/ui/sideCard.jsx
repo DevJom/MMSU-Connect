@@ -6,7 +6,7 @@ const SideCard = () => {
                     <h2 className="card-title">Popular</h2>
                 </div>
 
-                <div className="card w-auto bg-base-100 shadow-xl image-full">
+                <div className="card w-auto bg-base-100 shadow-xl image-full m-4">
                     <div className="card-body">
                         <h2 className="card-title">User</h2>
                         <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -27,7 +27,7 @@ const SideCard = () => {
                     <h2 className="card-title">Anouncement</h2>
                 </div>
 
-                <div className="card w-auto bg-base-100 shadow-xl image-full">
+                <div className="card w-auto bg-base-100 shadow-xl image-full m-4">
                     <div className="card-body">
                         <h2 className="card-title">Anouncement</h2>
                         <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -48,7 +48,7 @@ const SideCard = () => {
                     <h2 className="card-title">Events</h2>
                 </div>
 
-                <div className="card w-auto bg-base-100 shadow-xl image-full">
+                <div className="card w-auto bg-base-100 shadow-xl image-full m-4">
                     <div className="card-body">
                         <h2 className="card-title">Event</h2>
                         <p>If a dog chews shoes whose shoes does he choose?</p>

@@ -1,3 +1,5 @@
+import Menu from "./menu";
+
 const PostCard = () => {
     return (
         <>
@@ -22,9 +24,7 @@ const PostCard = () => {
                                     Click the button to listen on Spotiwhy app.
                                 </p>
                                 <div className="card-actions">
-                                    <button className="btn btn-primary">
-                                        View
-                                    </button>
+                                    <Menu />
                                 </div>
                             </div>
                         </div>

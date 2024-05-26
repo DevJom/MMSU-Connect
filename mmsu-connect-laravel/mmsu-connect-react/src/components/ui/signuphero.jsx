@@ -19,22 +19,16 @@ const Signuphero = () => {
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
                         <div className="card-body">
                             <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Email</span>
-                                </label>
                                 <input
                                     type="text"
-                                    placeholder="email"
+                                    placeholder="Email"
                                     className="input input-bordered"
                                 />
                             </div>
                             <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Password</span>
-                                </label>
                                 <input
                                     type="text"
-                                    placeholder="password"
+                                    placeholder="Password"
                                     className="input input-bordered"
                                 />
                                 <label className="label">
@@ -48,22 +42,22 @@ const Signuphero = () => {
                                 <Dropfile/>
                             </div>
                             <div className="form-control">
-                                    <button className="btn btn-success tesx-bg-white">
-                                        <LogOut className="mr-2 h-4 w-4" />
-                                        Sign-up
-                                    </button>
-                                    <label className="label label-text-alt text-center">
-                                        <p className="inline">
-                                            Already have account?{" "}
-                                            <a
-                                                href="login"
-                                                className="label-text-alt link link-hover"
-                                            >
-                                                Login
-                                            </a>
-                                        </p>
-                                    </label>
-                                </div>
+                                <button className="btn btn-success tesx-bg-white">
+                                    <LogOut className="mr-2 h-4 w-4" />
+                                    Sign-up
+                                </button>
+                                <label className="label label-text-alt text-center">
+                                    <p className="inline">
+                                        Already have account?{" "}
+                                        <a
+                                            href="login"
+                                            className="label-text-alt link link-hover"
+                                        >
+                                            Login
+                                        </a>
+                                    </p>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
