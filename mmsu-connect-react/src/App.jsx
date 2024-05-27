@@ -10,16 +10,20 @@ import Post from "./pages/post";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="login" element={<Login />} />
-      <Route path="signup" element={<Signup />} />
-      <Route index element={<Home />} />
-      <Route path="*" element={<NoPage />} />
-      <Route path="/anouncement" element={<Anouncement />} />
-      <Route path="/profile" element={<Profile />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/post" element={<Post />} />
-    </Routes>
+    <>
+      <div className="scrollbar-hide">
+        <Routes>
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<Signup />} />
+          <Route index element={<Home />} />
+          <Route path="*" element={<NoPage />} />
+          <Route path="/anouncement" element={<Anouncement />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/post" element={<Post />} />
+        </Routes>
+      </div>
+    </>
   );
 };
 
