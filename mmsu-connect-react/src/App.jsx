@@ -7,6 +7,7 @@ import Anouncement from "./pages/anouncement";
 import Profile from "./pages/profile";
 import About from "./pages/about";
 import Post from "./pages/post";
+import Developers from "./pages/developers";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Route path="/profile" element={<Profile />} />
       <Route path="/about" element={<About />} />
       <Route path="/post" element={<Post />} />
+      <Route path="/developers" element={<Developers />} />
     </Routes>
   );
 };
