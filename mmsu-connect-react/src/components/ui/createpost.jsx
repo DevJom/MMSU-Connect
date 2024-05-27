@@ -1,27 +1,16 @@
 const Createpost = () => {
     return (
-        <div className="Create_Post">
+        <div className="Create_Post w-[500px]">
             <div className="card bg-base-100 shadow-xl">
                 <div className="card-body">
-                    <div className="card-actions flex  justify-center">
-                        <div className="CreatePost_Modal ">
+                    <div className="card-actions flex justify-center">
+                        <div className="CreatePost_Modal">
                             <label
                                 htmlFor="my_modal_7"
-                                className="btn lg:w-[600px] mg:w-[400px] bg-base-300 text-gray-400 rounded-3xl"
+                                className="w-[450px] btn bg-base-300 text-gray-400 rounded-[50px]"
                             >
                                 What's on your mind $USER ?
                             </label>
-
-                            {/* <label class="input input-bordered flex items-center gap-2">
-                                            <input
-                                                type="text"
-                                                class="grow"
-                                                placeholder="Search"
-                                                htmlFor="my_modal_7"
-                                            />
-                                            <kbd class="kbd kbd-sm">⌘</kbd>
-                                            <kbd class="kbd kbd-sm">K</kbd>
-                                        </label> */}
 
                             <input
                                 type="checkbox"

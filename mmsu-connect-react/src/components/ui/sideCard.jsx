@@ -1,6 +1,6 @@
 const SideCard = () => {
     return (
-        <div className="card mt-4 block md:hidden lg:block xl:block 2xl:block">
+        <div className="card mt-4">
             <div className="card w-auto bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="card-title">Popular</h2>

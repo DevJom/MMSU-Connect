@@ -4,7 +4,7 @@ import Avatar from "./components/ui/avatar";
 const Navbar = () => {
     return (
         <>
-            <div className="navbar w-auto bg-base-100 border-b-2  border-green-800">
+            <div className="navbar w-full bg-green-900 text-white fixed top-0 z-10">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div
@@ -49,9 +49,6 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
                             <Link to="/anouncement">Anouncement</Link>
                         </li>
                         <li>
@@ -62,15 +59,15 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-
                 <div className="navbar-end">
                     <Link to="/profile">
                         <Avatar />
                     </Link>
                 </div>
             </div>
-
-            <Outlet />
+            <div className="pt-16">
+                <Outlet />
+            </div>
         </>
     );
 };

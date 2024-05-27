@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import  { useState, useEffect, useRef } from "react";
 
 const slides = [
     "Slide 1: Welcome to our site",
@@ -44,7 +44,7 @@ const Carousel = () => {
     };
 
     return (
-        <div className="relative overflow-hidden w-full h-64 flex items-center justify-center bg-green-800 text-white">
+        <div className="relative overflow-hidden w-full h-64 flex items-center justify-center bg-green-800 text-white border-b-3">
             <div
                 className="flex transition-transform duration-1000 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
