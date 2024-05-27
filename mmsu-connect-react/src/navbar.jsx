@@ -5,8 +5,8 @@ import { Bell } from "lucide-react";
 const Navbar = () => {
   return (
     <>
-      <div className="navbar w-full bg-white-900 text-green-900 fixed top-0 z-10">
-        <div className="navbar-start">
+      <div className="navbar bg-white-900 text-green-900 w-full fixed top-0 z-10">
+        <div className="navbar-start ">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -29,13 +29,13 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link to="/anouncement">Announcement</Link>
+                <Link to="/announcement">Announcement</Link>
               </li>
               <li>
-                <Link to="*">About</Link>
+                <Link to="/about">About</Link>
               </li>
               <li>
-                <Link to="*">Developers</Link>
+                <Link to="/developers">Developers</Link>
               </li>
             </ul>
           </div>
@@ -46,13 +46,13 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link to="/anouncement">Announcement</Link>
+              <Link to="/announcement">Announcement</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="*">Developers</Link>
+              <Link to="/developers">Developers</Link>
             </li>
           </ul>
         </div>
@@ -61,7 +61,7 @@ const Navbar = () => {
             <div className="bg-green rounded-full p-1">
               <Bell size={20} />
             </div>
-            <Avatar/>
+            <Avatar />
           </Link>
         </div>
       </div>
