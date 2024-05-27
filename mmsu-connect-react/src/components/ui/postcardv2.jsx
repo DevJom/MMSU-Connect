@@ -2,7 +2,7 @@ import { EllipsisVertical, Heart, Text } from "lucide-react";
 
 const Postcardv2 = () => {
   return (
-    <div className="w-96 bg-white shadow-xl rounded-lg overflow-hidden mb-4 w-[470px]">
+    <div className=" bg-white shadow-xl rounded-lg overflow-hidden mb-4 w-[470px]">
       <div className="p-4 flex items-center">
         <p className="font-bold text-lg">UserName</p>
         <p className="text-sm text-gray-500 ml-auto">Date post</p>
@@ -14,7 +14,7 @@ const Postcardv2 = () => {
       <hr />
 
       <div className="p-4">
-        <p className="text-base text-sm">
+        <p className="text-base">
           Aktres na si Kathryn Bernardo, nag-share sa Instagram ng ilang photos
           mula sa 72nd FAMAS Awards. AVGG — our baby and a project so close to
           my heart, saad ni Kathryn sa post. Philo/Mercy, thank you for letting
