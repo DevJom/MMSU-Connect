@@ -54,11 +54,15 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
+<<<<<<< Updated upstream
 <<<<<<<<< Temporary merge branch 1
               <Link to="/announcement">Announcement</Link>
 =========
               <Link to="/anouncement">Anouncement</Link>
 >>>>>>>>> Temporary merge branch 2
+=======
+              <Link to="/anouncement">Announcement</Link>
+>>>>>>> Stashed changes
             </li>
             <li>
               <Link to="/about">About</Link>
