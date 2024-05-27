@@ -6,6 +6,7 @@ import Signup from "./pages/signup";
 import Anouncement from "./pages/anouncement";
 import Profile from "./pages/profile";
 import About from "./pages/about";
+import Post from "./pages/post";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Route path="/anouncement" element={<Anouncement />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/about" element={<About />} />
+      <Route path="/post" element={<Post />} />
     </Routes>
   );
 };
