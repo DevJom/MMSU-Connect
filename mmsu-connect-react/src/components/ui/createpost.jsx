@@ -1,15 +1,15 @@
 const Createpost = () => {
     return (
-        <div className="Create_Post w-[500px]">
+        <div className="Create_Post">
             <div className="card bg-base-100 shadow-xl">
-                <div className="card-body">
+                <div className="card-body w-[500px]">
                     <div className="card-actions flex justify-center">
                         <div className="CreatePost_Modal">
                             <label
                                 htmlFor="my_modal_7"
                                 className="w-[450px] btn bg-base-300 text-gray-400 rounded-[50px]"
                             >
-                                What's on your mind $USER ?
+                               { "What's on your mind $USER ?"}
                             </label>
 
                             <input

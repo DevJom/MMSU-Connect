@@ -1,8 +1,8 @@
 import SideCard from "../components/ui/sideCard";
-import PostCard from "../components/ui/postCard";
 import Sidebar from "../components/ui/sidebar";
 import Createpost from "../components/ui/createpost";
 import Navbar from "../navbar";
+import Postcardv2 from "../components/ui/postcardv2";
 
 const Home = () => {
   return (
@@ -13,21 +13,21 @@ const Home = () => {
           <SideCard />
         </div>
         <div className="w-2/4 grow flex-initial overflow-auto scrollbar-hide ">
-          <div className="text-center"> {/* IPATINGAM MAN DETUY */}
-            <div className="mt-4 mb-4 ">
+          <div className="flex justify-center item-center">
+            <div className="mt-4 mb-4">
               <Createpost />
             </div>
           </div>
 
-          <div className="snap-proximity snap-y text-center">
-            <div className="snap-center">
-              <PostCard />
+          <div className="flex justify-center items-center flex-col">
+            <div className="">
+              <Postcardv2/>
             </div>
-            <div className="snap-center">
-              <PostCard />
+            <div className="">
+              <Postcardv2/>
             </div>
-            <div className="snap-center">
-              <PostCard />
+            <div className="">
+              <Postcardv2/>
             </div>
           </div>
         </div>
