@@ -1,14 +1,15 @@
 import Aboutcard from "../components/ui/aboutcard";
-
+import Footer from "../components/ui/footer";
 const About = () => {
-    return (
-        <>
-            <div className="bg-base-200">
-                <Aboutcard />
-            </div>
-            <div className=" min-h-screen bg-base-200"></div>
-        </>
-    );
+  return (
+    <>
+      <div className="bg-base-200">
+        <Aboutcard />
+      </div>
+
+      <Footer />
+    </>
+  );
 };
 
 export default About;
