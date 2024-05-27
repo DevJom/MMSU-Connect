@@ -81,7 +81,7 @@ const Sidebar = () => {
                     aria-label="close sidebar"
                     className="drawer-overlay"
                 ></label>
-                <ul className="menu w-80 min-h-full bg-base-200">
+                <ul className="menu w-80 min-h-full bg-base-100">
                     <Collapse title="Student" users={students} />
                     <div className="divider"></div>
                     <Collapse title="Teacher" users={teachers} />

@@ -1,20 +1,16 @@
-// import SideCard from "../components/ui/sideCard";
+import SideCard from "../components/ui/sideCard";
 import Sidebar from "../components/ui/sidebar";
 import Createpost from "../components/ui/createpost";
 import Navbar from "../navbar";
 import Postcardv2 from "../components/ui/postcardv2";
-import Sidebarv2 from "../components/ui/sidebarv2";
-// import Navbarv2 from "../navbarv2";
 
 const Home = () => {
   return (
     <>
       <Navbar />
-      {/* <Navbarv2/> */}
-      <div className="flex h-screen bg-base-200 gap-4 scrollbar-hide">
-        <div className="w-1/4  flex-initial overflow-auto scrollbar-hide">
-          {/* <SideCard /> */}
-          <Sidebarv2 />
+      <div className="flex h-screen bg-base-200 gap-4">
+        <div className="w-1/4 ml-4 flex-initial overflow-auto scrollbar-hide">
+          <SideCard />
         </div>
         <div className="w-2/4 grow flex-initial overflow-auto scrollbar-hide ">
           <div className="flex justify-center item-center">
