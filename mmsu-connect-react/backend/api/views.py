@@ -13,11 +13,11 @@ class PostListCreate(generics.ListCreateAPIView):
 
     def get_queryset(self):
         user = self.request.user
-        return Post.objects.filter(author=user)
+        return Post.objects.all().order_by('-created_at')
     
     def perform_create(self, serializer):
         if serializer.is_valid():
-            serializer.save(author=self.request.user)
+            serializer.save(author=self.request.user.username)
         else:
             print(serializer.errors)
 
@@ -26,7 +26,7 @@ class PostDelete(generics.DestroyAPIView):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        user = self.request.user
+        user = self.request.user.username
         return Post.objects.filter(author=user)
 
 class PostCommentCreate(generics.ListCreateAPIView):
@@ -38,10 +38,10 @@ class PostCommentCreate(generics.ListCreateAPIView):
     
     def perform_create(self, serializer):
         if serializer.is_valid():
-            serializer.save(commentor=self.request.user, post_id = self.request.data['post_id'])
+            print(self.request.user.username)
+            serializer.save(commentor=self.request.user.username, post_id = self.request.data['post_id'])
         else:
             print(serializer.errors)
-
     
 # Create your views here.
 class CreateUserView(generics.CreateAPIView):

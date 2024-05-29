@@ -33,7 +33,7 @@ const Home = () => {
           </div>
         </div>
         <div className="w-1/4 shrink flex-initial overflow-auto scrollbar-hide">
-          <Sidebar />
+          {/* <Sidebar /> */}
         </div>
       </div>
     </>
